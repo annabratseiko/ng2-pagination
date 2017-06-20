@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="navigation">
+    <div class="form-group col-sm-2">
+      <label for="selectLimit">Set limit:</label>
+      <select class="form-control" id="selectLimit" (change)="onSelectChange($event.target.value)"> 
+        <option *ngFor="let object of limitsArray" [value]="object" [selected]="object === limit">{{object}}</option>
+      </select>
+    </div>
+    <div>
+      <app-pagination [limit]="limit" [items]="items" (pageNumber)="getPageNumber($event)" [page]="page" [maxItems]="maxItems"></app-pagination>
+    </div>
+  </div>
+  <app-list [list]="items" [limit]="limit" [page]="page"></app-list>
+</div>

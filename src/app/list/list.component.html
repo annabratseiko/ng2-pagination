@@ -1,0 +1,11 @@
+<div class="list-group">
+  <div *ngFor="let item of list; let i = index">
+    <a href="javascript:void(0)" class="list-group-item list-group-item-action flex-column align-items-start" *ngIf="((limit*page - limit) <= i)&&(i < page*limit)">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{item.name}}</h5>
+        <!-- <small>3 days ago</small> -->
+      </div>
+      <p class="mb-1">{{item.text}}</p>
+    </a>
+  </div>
+</div>

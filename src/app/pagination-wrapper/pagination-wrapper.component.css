@@ -1,0 +1,10 @@
+.navigation {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-group {
+  padding-left: 0;
+}
